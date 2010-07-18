@@ -1,6 +1,6 @@
-h2.description
+<h2>description</h2>
 <p>here are some codes for developers who wanna use <a href="http://curt.cc">curt.cc</a> api in their projects : )</p>
 <p>to see the curt.cc api document, plz <a href="http://curt.cc/api.html">click here</a>.</p>
 
 <h2>about curt.cc</h2>
-<p><a href="http://curt.cc">curt.cc</a> is a project of <a href="http://geek-zoo">geek-zoo.com</a>. it was created as shorten urls service.</p>
+<p>"curt.cc":http://curt.cc is a project of <a href="http://geek-zoo">geek-zoo.com</a>. it was created as shorten urls service.</p>
