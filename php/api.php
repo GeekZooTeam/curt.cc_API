@@ -8,9 +8,8 @@
  *
  */
 
-// $a = new curt();
-//echo $a->cc('http://www.google.com');
-//echo $a->vv('http://curt.cc/akz8b');
+echo $a::cc('http://www.google.com');
+echo $a::vv('http://curt.cc/akz8b');
 
 class curt
 {
