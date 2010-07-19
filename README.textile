@@ -3,4 +3,6 @@
 <p>to see the curt.cc api document, plz <a href="http://curt.cc/api.html">click here</a>.</p>
 
 <h2>about curt.cc</h2>
-<p>"curt.cc":http://curt.cc is a project of <a href="http://geek-zoo">geek-zoo.com</a>. it was created as shorten urls service.</p>
+<p>"curt.cc":http://curt.cc is a project of <a href="http://geek-zoo">geek-zoo.com</a>. it was created as a shorten urls service.</p>
+
+<h2>todo</h2>
