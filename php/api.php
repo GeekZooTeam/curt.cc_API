@@ -14,37 +14,32 @@
 
 class curt
 {
-	
     const CURT_URL = 'http://curt.cc/service/generator.php?url=';
-	const VIEW_URL = 'http://curt.cc/service/preview.php?url=';
+    const VIEW_URL = 'http://curt.cc/service/preview.php?url=';
 
     public static function cc($url)
     {
         $url = self::CURT_URL.urlencode($url);
         $result = @json_decode(@file_get_contents($url), true);
 
-        if (isset($result['url']))
-        {
-		
+        if (isset($result['url'])) {
             return $result['url'];
         }
 
         return '';
     }
 
-	public static function vv($url)
-	{
-		$url = self::VIEW_URL.urlencode($url);
+    public static function vv($url)
+    {
+        $url = self::VIEW_URL.urlencode($url);
         $result = @json_decode(@file_get_contents($url), true);
 
-        if (isset($result['url']))
-        {
-		
+        if (isset($result['url'])) {
             return $result['url'];
         }
 
         return '';
-	}
+    }
 }
 
 
