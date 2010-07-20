@@ -1,8 +1,8 @@
 <h2>description</h2>
-<p>here are some codes for developers who wanna use <a href="http://curt.cc">curt.cc</a> api in their projects : )</p>
-<p>to see the curt.cc api document, plz <a href="http://curt.cc/api.html">click here</a>.</p>
+<p>here are some codes for developers who wanna use "curt.cc":http://curt.cc api in their projects : )</p>
+<p>to see the curt.cc api document, plz "click here":http://curt.cc/api.html.</p>
 
 <h2>about curt.cc</h2>
-<p>"curt.cc":http://curt.cc is a project of <a href="http://geek-zoo">geek-zoo.com</a>. it was created as a shorten urls service.</p>
+<p>"curt.cc":http://curt.cc is a project of "geek-zoo.com":http://geek-zoo.com. it was created as a shorten urls service.</p>
 
 <h2>todo</h2>
