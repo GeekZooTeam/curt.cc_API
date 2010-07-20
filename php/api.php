@@ -14,7 +14,7 @@
 class curt
 {
     const CURT_URL = 'http://curt.cc/service/generator.php?url=';
-    const VIEW_URL = 'http://curt.cc/service/preview.php?url=';
+    const VIEW_URL = 'http://curt.cc/service/previewer.php?url=';
 
     public static function cc($url)
     {

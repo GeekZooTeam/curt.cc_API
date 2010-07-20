@@ -41,6 +41,6 @@ var curt = {
     },
     
     preView : function(url, callback) {
-        return curt.getScript('preview', url, callback);
+        return curt.getScript('previewer', url, callback);
     }
 };
