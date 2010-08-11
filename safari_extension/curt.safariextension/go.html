@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<body>
+<script type="text/javascript" charset="utf-8">
+/*
+ * This file is part of the Geek-Zoo Projects.
+ *
+ * @copyright (c) 2010 Geek-Zoo Projects More info http://www.geek-zoo.com
+ * @license http://opensource.org/licenses/gpl-2.0.php The GNU General Public License
+ * @author xuanyan <xuanyan@geek-zoo.com>
+ *
+ */
+
+// you can find the api doc at :http://curt.cc/api.html
+
+var language = window.navigator.language.toLowerCase();
+var notice = language == 'zh-cn' ? '缩短后的URL:' : 'Shorten Url:';
+var curt = {
+
+    version : '0.2',
+
+    getScript : function(method, url, callback) {
+        var curt_cc_callback = 'curt_cc_' + new Date().getTime(),
+            api = document.createElement('script');
+
+        api.type = 'text/javascript';
+        api.src = 'http://curt.cc/service/'+method+'.php?url='
+                  + encodeURIComponent(url)
+                  + '&callback=' + curt_cc_callback;
+        document.getElementsByTagName('head')[0].appendChild(api);
+        window[curt_cc_callback] = function(json) {
+            callback(json.url);
+            window[curt_cc_callback] = undefined;
+            try {
+                delete window[curt_cc_callback];
+            } catch(e) {}
+            document.getElementsByTagName('head')[0].removeChild(api);
+        };
+        return true;
+    },
+
+    cc : function(url, callback) {
+        return curt.getScript('generator', url, callback);
+    },
+    
+    preView : function(url, callback) {
+        return curt.getScript('previewer', url, callback);
+    }
+};
+
+safari.application.addEventListener("command", performCommand, false);
+safari.application.addEventListener("validate", validateCommand, false);
+
+function performCommand(event)
+{
+    if (event.command === "curt_cc") {
+		event.target.disabled = true;
+		url = safari.application.activeBrowserWindow.activeTab.url;
+		curt.cc( url, function(back_url) {
+			prompt(notice, back_url);
+			event.target.disabled = false;
+		});
+    }
+}
+
+function validateCommand(event)
+{
+	
+    if (!event.command === "curt_cc") {
+        return;
+    }
+
+	event.target.disabled = !event.target || !event.target.browserWindow.activeTab.url;    
+}
+
+</script>
+</body>
+</html>
