@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Author</key>
-	<string>quqiang @ geek-zoo team</string>
+	<string>quqiang@geek-zoo team</string>
 	<key>CFBundleDisplayName</key>
 	<string>curt.cc</string>
 	<key>CFBundleIdentifier</key>
@@ -11,9 +11,9 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>0.1b</string>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>0.1b</string>
 	<key>Chrome</key>
 	<dict>
 		<key>Global Page</key>
@@ -42,7 +42,7 @@
 		<dict/>
 	</dict>
 	<key>Description</key>
-	<string>this extension can help u get the shorten urls with curt.cc api. (使用curt.cc进行短网址生成)</string>
+	<string>Shorten long URLs directly from Safari with one click (使用curt.cc进行短网址生成)</string>
 	<key>ExtensionInfoDictionaryVersion</key>
 	<string>1.0</string>
 	<key>Permissions</key>
