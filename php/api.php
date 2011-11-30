@@ -9,7 +9,7 @@
  */
 
 // echo curt::cc('http://www.google.com');
-// echo curt::vv('http://curt.cc/akz8b');
+// echo curt::preView('http://curt.cc/akz8b');
 
 class curt
 {
@@ -28,7 +28,7 @@ class curt
         return '';
     }
 
-    public static function vv($url)
+    public static function preView($url)
     {
         $url = self::VIEW_URL.urlencode($url);
         $result = @json_decode(@file_get_contents($url), true);
